@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
 
-/*
-        1. var KeyWord
-        Re-declaration is allowed
-        Re-initialization is allowed
-        Re-assigmwnt is allowed
-        Globally Scoped
+        /*
+                1. var KeyWord
+                Re-declaration is allowed
+                Re-initialization is allowed
+                Re-assigmwnt is allowed
+                Globally Scoped
+        
+                2. let KeyWord
+                Re-declaration is not allowed
+                Re-initialization is allowed
+                Re-assigmwnt is allowed
+                Blocked scoped
+        
+                3. const KeyWord
+                Re-declaration is not allowed
+                Re-initialization is not allowed
+                Re-assignment is  not allowed
+                Blocked scoped
+        
+        
+        */
 
-        2. let KeyWord
-        Re-declaration is not allowed
-        Re-initialization is allowed
-        Re-assigmwnt is allowed
-        Blocked scoped
+        // {
+        //     let x = 9;
+        //     x = 8;
+        // }
 
-        3. const KeyWord
-        Re-declaration is not allowed
-        Re-initialization is not allowed
-        Re-assignment is  not allowed
-        Blocked scoped
+        const x = 9;
 
-
-*/
-
-// {
-//     let x = 9;
-//     x = 8;
-// }
-    
- const x = 9;
-
- {
-   const x = 10;
-    console.log(x);
- }
+        {
+            const x = 10;
+            console.log(x);
+        }
     </script>
 </body>
+
 </html>
