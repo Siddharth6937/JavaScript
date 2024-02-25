@@ -7,10 +7,12 @@ body{
 }
 
 .container{
+    background-image: linear-gradient(to right, red , yellow);
     display: flex;
     width: 100%;
 }
 .pannel{
+    position: relative;
     height: 80vh;
     flex : 0.5;
     margin: 10px;
@@ -18,9 +20,11 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     height: 80vh;
+    border: 5px solid black;
     border-radius: 50px;
-    color: aliceblue;
+    color: yellow;
     cursor: pointer;
+    transition: all 700ms ease-in;
 }
 .pannel.active{
     flex: 5;
@@ -35,23 +39,23 @@ body{
 }
 .pannel.active h3{
     opacity: 1;
-    /* transition: opacity 0.3s ease-in 0.4s; */
+    transition: opacity 0.3s ease-in 0.4s;
 }
 
-#pannel-1{
+#pannel1{
     background-image: url("https://media.istockphoto.com/id/1502800388/photo/bumblebee-visiting-white-peony.webp?b=1&s=170667a&w=0&k=20&c=cRzS-6zIwH0ECjHfQIsNmXX92KteMRpQssUiyx8oV8A=");
 }
 
-#pannel-2{
+#pannel2{
     background-image: url("https://media.istockphoto.com/id/1603458318/photo/bee-pollinating-a-desert-plant-sonoran-desert-arizona.webp?b=1&s=170667a&w=0&k=20&c=FqY2Jru6C7cdno_mAjUoI2Vdu6UaJ61gwH7nhF87cIM=");
 }
-#pannel-3{
+#pannel3{
     background-image: url("https://media.istockphoto.com/id/1987948084/photo/large-forest-wasps-hive-nest-on-tall-pine-trees-natural-honeycomb-making-process-in-wildlife.webp?b=1&s=170667a&w=0&k=20&c=bHK_B7nrwmpFG0E9h3nze8pBXqg_oTuiWoaV52b0o58=");
 
 }
-#pannel-4{
+#pannel4{
     background-image: url("https://media.istockphoto.com/id/1975531656/photo/bee-napping.webp?b=1&s=170667a&w=0&k=20&c=2dZrMwZpljTtMc6KAehYTP6JCymngOLVkBNQ_LjOZdg=");
 }
-#pannel-5{
+#pannel5{
     background-image: url("https://media.istockphoto.com/id/1455932995/photo/bee-sleeping-on-a-sunflower.webp?b=1&s=170667a&w=0&k=20&c=GXibVQnx19xP3HJ58AcCw6D3dICxZRnumr8DnENyhOI=");
 }
