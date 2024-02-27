@@ -29,6 +29,13 @@
 
                                     // For Loop
         
-        for(let i = 1; i <= 10; i++){
-            console.log(i);
+        // for(let i = 1; i <= 10; i++){
+        //     console.log(i);
+        // }
+
+                                    // For OF loop
+        let arr = [7,13,13,4,5,7,8];
+
+        for (element of arr) {
+            console.log(element);
         }

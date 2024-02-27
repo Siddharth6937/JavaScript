@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr = ['Akash', 'Naveen', 'sadhana', 'waris','Nagraj'];
+        // arr.push();
+        // arr.pop();
+        // arr.shift();
+        // arr.pop();
+        // arr.unshift('ammu')
+        // console.log(arr);
+
+        // let arr = ['Akash', 'Naveen', false, 'waris',2]
+        // arr.shift();  //'Naveen', false, 'waris',2
+        // arr.pop();    //Naveen', false, 'waris'
+        // arr.unshift('Naveen') //Naveen, Naveen', false, 'waris'
+        // arr.pop();      //Naveen, Naveen', false
+        // let x = arr.pop();
+
+        // console.log(arr, !x);
+
+let amount = 0;
+let total = [];
+for(let i = 0; i < 5; i++){
+        let x = prompt("Enter your bank Balance amount");
+
+        if(x > 200000){
+            total[i] += Number(eval(x * 10/100) - 1/5);
+        }else if(x > 100000){
+            total[i] += Number(eval(x * 5/100) - 1/20);
+        }else{
+            total[i] += Number(eval(x * 3/100));
+        }
+}
+alert("The price is "+total);
+        
+    </script>
+</body>
+</html>
