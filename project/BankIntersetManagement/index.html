@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Interest Management</title>
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="bank-balance-display">
+        <table>
+            <tr>
+                <th>Account Holder Name</th>
+                <th>Current Account Balance</th>
+                <th>Balance After interset</th>
+            </tr>
+
+            <tr>
+                <td>Siddharth</td>
+                <td><input type="number" id="bank-balance-1"></td>
+                <td><input type="number" disabled></td>
+            </tr>
+
+            <tr>
+                <td>Priyanka</td>
+                <td><input type="number" id="bank-balance-2"></td>
+                <td><input type="number" disabled></td>
+            </tr>
+
+            <tr>
+                <td>Siddharth</td>
+                <td><input type="number" id="bank-balance-3"></td>
+                <td><input type="number" disabled></td>
+            </tr>
+        </table>
+
+
+        <button type="button" onclick="calculateInterset()" class="btn btn-primary">Calculate interset for all
+            acount holders</button>
+
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
