@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSEvents</title>
+</head>
+<body>
+    <h1>Click Events :-</h1>
+                 <!-- Events -->
+        <!-- onclick :- It notice our action through how many time we are clicked on this input--> 
+    onclick &rarr; <input type="text" placeholder="onclick" onclick="abc()"><br><br>
+
+        <!-- onfocus :- It notice our action when we move our focus on other area and then again we the that area then onfocus notice our changes -->
+    onfocus &rarr; <input type="text" placeholder="onfocus" onfocus="abc()"><br><br>
+
+        <!-- onblur :- It notice changes when we lost focus on the input box and again we clicked on the input box and lost the focus again.  -->
+    onblur &rarr; <input type="text" placeholder="onblur" onblur="abc()"><br><br>
+        <!-- onchange :- It only notice changes when we do any changes inside the box and click other area . Other wise no chanages count -->
+    onchange &rarr; <input type="text" placeholder="onchange" onchange="abc()"><br><br>
+
+        <!-- ondblclick :- It only count the changes when we double click on that area -->
+    ondblclick &rarr; <input type="text" placeholder="ondblclick" ondblclick="abc()"><br><br>
+
+        <!-- onmouseover :- it only notice or count when ever how many times cusror moved inside that area -->
+    onmouseover &rarr; <input type="text" placeholder="onmouseover" onmouseover="abc()"><br><br>
+
+        <!-- onmouseout :- it only notice or count when ever how many times cusror moved outside that area  -->
+    onmouseout &rarr; <input type="text" placeholder="onmouseout" onmouseout="abc()"><br><br>
+    
+        <!-- onmousemove :-  It notice each and every micro movement in that area  -->
+    onmousemove &rarr; <input type="text" placeholder="onmousemove" onmousemove="abc()"><br><br>
+
+    onkeydown &rarr; <input type="text" placeholder="onkeydown" onkeydown="abc()"><br><br>
+    onkeypress &rarr; <input type="text" placeholder="onkeypress" onkeypress="abc()"><br><br>
+    onkeykeyup &rarr; <input type="text" placeholder="onkeyup" onkeyup="abc()"><br><br>
+
+    <script>
+        function abc(){
+            console.log("abc");
+        }
+    </script>
+</body>
+</html>
