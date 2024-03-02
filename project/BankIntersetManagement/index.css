@@ -18,13 +18,14 @@ table, tr ,th, td{
     border-collapse: collapse;
 }
 
-tr, th{
+td, th{
     
     padding: 10px;
 }
 
 td input{
-    width: 90%;
+    width: 75%;
+    padding: 10px 20px;
 }
 
 .bank-balance-display button{
