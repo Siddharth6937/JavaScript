@@ -143,13 +143,13 @@
 
                  //Exrecise 
 
-        let arr = [["Priyanka","Kumari"],["Siddharth","Kumar"],["Piku","Kumari"],["Premanand","Maharaj"]];
+        // let arr = [["Priyanka","Kumari"],["Siddharth","Kumar"],["Piku","Kumari"],["Premanand","Maharaj"]];
 
-        let newArr = arr.map((element,index) =>{
-            return element.join(" "); 
-        })
+        // let newArr = arr.map((element,index) =>{
+        //     return element.join(" "); 
+        // })
 
-        console.log(newArr);
+        // console.log(newArr);
 
                 // Normal for loop
 
@@ -160,3 +160,28 @@
         // }
 
         // console.log(newArr);
+
+/*
+        reduce :- Calculate and return a single computed value  from an array
+        - loop through each element of the array
+        - returns element/modified element
+        - return the overall computed value after calculation amde in each iteration
+        - no change in input array
+
+
+        let newArr = arr.reduce( function(accumulator, element){
+                // code
+        })
+ */
+
+        let arr = [1,2,3,4,5,6,7];
+
+        let sum = arr.reduce((accumulator, element) => {
+                console.log(accumulator, element);
+                return accumulator+element;
+        },10)
+
+        console.log(sum);
+
+
+        // Find, FindIndex

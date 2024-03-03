@@ -10,7 +10,7 @@ let stateValid = document.getElementById("stateValid");
 let stateInvalid = document.getElementById("stateInvalid");
 let zipCodeValid = document.getElementById("zipCodeValid");
 let zipCodeInvalid = document.getElementById("zipCodeInvalid");
-let invalidFeedback = document.getElementById("invalid-feedback");
+let tnCInvalid = document.getElementById("tnCInvalid");
 
 function validate() {
 
@@ -20,7 +20,7 @@ function validate() {
     let phoneNumber = document.getElementById("phoneNumber").value;
     let state = document.getElementById("state").value;
     let zipCode = document.getElementById("zipCode").value;
-    let invalidCheck = document.getElementById("invalidCheck").value;
+    let tNCCheckBox = document.getElementById("tNCCheckBox").checked;
 
    if(firstName === ''){
    firstNameInvalid.style.display = "block";
@@ -47,7 +47,7 @@ function validate() {
     }
 
 
-    if(phoneNumber.length != 10){
+    if(phoneNumber.length != 10 || Number(phoneNumber[0]) <= 6){
         phoneInvalid.style.display="block";
         phoneValid.style.display="none";
     }else {
@@ -70,10 +70,11 @@ function validate() {
         zipCodeValid.style.display="block";
         zipCodeInvalid.style.display="none";
     }
+    console.log(tNCCheckBox);
 
-    console.log(state);
-
-    // if(invalidCheck.length === 0){
-    //     invalidFeedback.style.display="block";
-    // }
+    if(!tNCCheckBox){
+        tnCInvalid.style.display="block";
+    }else {
+        tnCInvalid.style.display="none";
+    }
 }
