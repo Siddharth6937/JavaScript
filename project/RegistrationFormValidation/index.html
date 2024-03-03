@@ -12,55 +12,85 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container ">
+        <h1 class="display-2 text-danger text-center mt-5"><u><i><b>Registration Form</b></i></u></h1>
         <div class="registration-form">
-            <form class="row g-3 needs-validation" novalidate onsubmit="validate()">
+            <form class="row g-3 needs-validation" novalidate  autocomplete="off">
                 <div class="col-md-4">
+                    
                     <label for="firstName" class="form-label">First name</label>
                     <input type="text" class="form-control" id="firstName" required>
-                    <div class="valid-feedback">
+                    <div class="valid-feedback" id="firstNameValid">
                         Looks good!
                     </div>
+                    <div class="invalid-feedback" id="firstNameInvalid">
+                        Please enter valid first name.
+                    </div>
                 </div>
+
                 <div class="col-md-4">
                     <label for="lastName" class="form-label">Last name</label>
                     <input type="text" class="form-control" id="lastName" required>
-                    <div class="valid-feedback">
+                    <div class="valid-feedback" id="lastNameValid">
                         Looks good!
                     </div>
+                    <div class="invalid-feedback" id="lastNameInvalid">
+                        Please enter valid last name.
+                    </div>
                 </div>
+
                 <div class="col-md-4">
                     <label for="email" class="form-label">E-mail</label>
                     <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
                         <input type="text" class="form-control" id="email"
                             aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">
-                            Please choose a username.
-                        </div>
+                            <div class="valid-feedback" id="emailValid">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="emailInvalid">
+                                Please enter valid email.
+                            </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <label for="phoneNumber" class="form-label">Phone Number</label>
                     <input type="text" class="form-control" id="phoneNumber" required>
-                    <div class="invalid-feedback">
+                    <div class="valid-feedback" id="phoneValid">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback" id="phoneInvalid">
                         Please provide a valid Phone number.
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <label for="state" class="form-label">State</label>
                     <select class="form-select" id="state" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option>...</option>
+                        <option selected disabled >Choose...</option>
+                        <option>Jharkhand</option>
+                        <option>Bihar</option>
+                        <option>West Bengal</option>
+                        <option>Uttarakhand</option>
+                        <option>Odisha</option>
+                        <option>Punjab</option>
                     </select>
-                    <div class="invalid-feedback">
-                        Please select a valid state.
+                    <div class="valid-feedback" id="stateValid">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback" id="stateInvalid">
+                        Please provide a valid state.
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <label for="zipCode" class="form-label">Zip</label>
                     <input type="text" class="form-control" id="zipCode" required>
-                    <div class="invalid-feedback">
+                    <div class="valid-feedback" id="zipCodeValid">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback" id="zipCodeInvalid">
                         Please provide a valid zip.
                     </div>
                 </div>
@@ -70,13 +100,13 @@
                         <label class="form-check-label" for="invalidCheck">
                             Agree to terms and conditions
                         </label>
-                        <div class="invalid-feedback">
+                        <div class="invalid-feedback" id="invalid-feedback">
                             You must agree before submitting.
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-dark" type="submit">Submit form</button>
+                    <button class="btn btn-dark" type="button" onclick="validate()">Submit form</button>
                 </div>
             </form>
         </div>

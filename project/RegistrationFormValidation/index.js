@@ -1,4 +1,16 @@
-
+let firstNameValid = document.getElementById("firstNameValid");
+let firstNameInvalid = document.getElementById("firstNameInvalid");
+let lastNameValid = document.getElementById("lastNameValid");
+let lastNameInvalid = document.getElementById("lastNameInvalid");
+let emailValid = document.getElementById("emailValid");
+let emailInvalid = document.getElementById("emailInvalid");
+let phoneValid = document.getElementById("phoneValid");
+let phoneInvalid = document.getElementById("phoneInvalid");
+let stateValid = document.getElementById("stateValid");
+let stateInvalid = document.getElementById("stateInvalid");
+let zipCodeValid = document.getElementById("zipCodeValid");
+let zipCodeInvalid = document.getElementById("zipCodeInvalid");
+let invalidFeedback = document.getElementById("invalid-feedback");
 
 function validate() {
 
@@ -8,8 +20,60 @@ function validate() {
     let phoneNumber = document.getElementById("phoneNumber").value;
     let state = document.getElementById("state").value;
     let zipCode = document.getElementById("zipCode").value;
+    let invalidCheck = document.getElementById("invalidCheck").value;
+
+   if(firstName === ''){
+   firstNameInvalid.style.display = "block";
+   firstNameValid.style.display = "none";
+   }else {
+    firstNameValid.style.display = "block";
+    firstNameInvalid.style.display = "none";
+   }
+
+   if(lastName === ''){
+    document.getElementById("lastNameInvalid").style.display = "block";
+    document.getElementById("lastNameValid").style.display = "none";
+    }else {
+     document.getElementById("lastNameValid").style.display = "block";
+     document.getElementById("lastNameInvalid").style.display = "none";
+    }
+
+    if(!email.includes("@") || !email.includes(".") || email.startsWith("@") || email.slice(email.lastIndexOf(".")).length < 3) {
+        emailInvalid.style.display = "block";
+        emailValid.style.display = "none";
+    }else {
+        emailValid.style.display = "block";
+        emailInvalid.style.display = "none";
+    }
 
 
-    console.log(firstName, lastName, email, phoneNumber, state, zipCode);
-    console.log("ki");
+    if(phoneNumber.length != 10){
+        phoneInvalid.style.display="block";
+        phoneValid.style.display="none";
+    }else {
+        phoneValid.style.display="block";
+        phoneInvalid.style.display="none";
+    }
+
+    if(state == ""){
+        stateInvalid.style.display="block";
+        stateValid.style.display="none";
+    }else {
+        stateValid.style.display="block";
+        stateInvalid.style.display="none";
+    }
+
+    if(zipCode.length != 6){
+        zipCodeInvalid.style.display="block";
+        zipCodeValid.style.display="none";
+    }else {
+        zipCodeValid.style.display="block";
+        zipCodeInvalid.style.display="none";
+    }
+
+    console.log(typeof(Number(phoneNumber)));
+
+    // if(invalidCheck.length === 0){
+    //     invalidFeedback.style.display="block";
+    // }
 }
