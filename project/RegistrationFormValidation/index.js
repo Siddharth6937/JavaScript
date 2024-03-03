@@ -55,7 +55,7 @@ function validate() {
         phoneInvalid.style.display="none";
     }
 
-    if(state == ""){
+    if(state == "Choose..."){
         stateInvalid.style.display="block";
         stateValid.style.display="none";
     }else {
@@ -71,7 +71,7 @@ function validate() {
         zipCodeInvalid.style.display="none";
     }
 
-    console.log(typeof(Number(phoneNumber)));
+    console.log(state);
 
     // if(invalidCheck.length === 0){
     //     invalidFeedback.style.display="block";
