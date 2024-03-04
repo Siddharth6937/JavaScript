@@ -39,3 +39,5 @@
         for (element of arr) {
             console.log(element);
         }
+
+/*                                    //For in loop:- mostly use with object

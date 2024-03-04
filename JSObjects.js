@@ -11,7 +11,7 @@
 // Properties 
 // -keys() in objects which are used only for executing  purpose are known as Methods
 
-        // Accessing the values of an object using keys
+        // Accessing the values of an object using keys(****)
 
 // console.log(piku.age);
 
