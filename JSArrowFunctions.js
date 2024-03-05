@@ -35,4 +35,7 @@
       console.log(ex1("apple"));
 
 
-    
+/*
+      Arrow functions are not hoisted 
+      you don't have access this keyword inside the arrow function
+*/
