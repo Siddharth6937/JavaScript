@@ -15,7 +15,6 @@ let vashnavi = {
 // console.log(Object.entries(vashnavi));
 
 
-
 let siddharth = {
     name : {
         firstName : "Siddharth",
