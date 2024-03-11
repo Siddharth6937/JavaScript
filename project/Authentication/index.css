@@ -1,0 +1,37 @@
+input{
+    display: block;
+    margin: auto;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+div{
+    padding: 50px;
+    border: 2px solid black;
+    text-align: center;
+}
+button{
+    padding: 10px 20px;
+  font-size: 1.2rem;
+  background: rgb(46, 39, 39);
+  color: white;
+  border-radius: 10px;
+}
+
+button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+p{
+    font-size: 1.2rem;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+p.valid{
+color: green;
+}
+p.Invalid{
+    color: red;
+    }

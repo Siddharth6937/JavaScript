@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div>
+        <input type="password" id="sign-up-input" placeholder="create your new pasword">
+        <p class="Invalid" id="sign-up-Invalid">Please use strong password!</p>
+        <p class="valid" id="sign-up-valid">password saved successfully!</p>
+        <button onclick="signUp()">sign Up </button>
+    </div>
+    <hr>
+    <div>
+        <input type="password" id="login-input" placeholder="Enter  password">
+        <p class="valid" id="login-valid" >password correct, login access granted! </p>
+        <p class="Invalid" id="login-invalid">password incorrect, login  denied!</p>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
