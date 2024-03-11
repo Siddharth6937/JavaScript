@@ -48,7 +48,7 @@
 
 /*___________________________________________________________________ */
 
-// 5. Power of Opreator
+// 5. Exponential Opreator
 // console.log(2**4);
 
 /*___________________________________________________________________ */
@@ -161,16 +161,16 @@
 //Note :- Using spread operator, you should know the structure to deep copy 
 
 
-let piku = {
-    name: "Priyanka Kumari",
-    batch: "22",
-    likesReadingBooks: true,
-    address: { 
-        city : "Bokaro",
-        state : "Jharkhand",
-        country : "India"
-    }
-}
+// let piku = {
+//     name: "Priyanka Kumari",
+//     batch: "22",
+//     likesReadingBooks: true,
+//     address: {
+//         city: "Bokaro",
+//         state: "Jharkhand",
+//         country: "India"
+//     }
+// }
 
 // let Priyanka = {
 //     ...piku,
@@ -183,14 +183,91 @@ let piku = {
 // console.log(piku);
 // console.log(Priyanka);
 
-    //2. JSON Method
+//2. JSON Method
 
-    // let priyanka = JSON.parse(JSON.stringify(piku));
-    // Priyanka.address.city = "Bihar"
-    // console.log(priyanka);
+// let priyanka = JSON.parse(JSON.stringify(piku));
+// Priyanka.address.city = "Bihar"
+// console.log(priyanka);
 
-    // 3.Object.assign()
+// 3.Object.assign()
 
-    // let priyanka = Object.assign({} , piku);
-    // priyanka.address.city = "Patna"
-    // console.log(priyanka)
+// let priyanka = Object.assign({} , piku);
+// priyanka.address.city = "Patna"
+// console.log(priyanka)
+
+
+// 9. Destructuring
+
+// let obj = {
+//     x: "1",
+//     y: "2"
+// }
+
+// let { x, y } = obj
+
+// let a = obj;
+// console.log(a);
+
+
+// let piku = {
+//     name: "Priyanka Kumari",
+//     batch: "22",
+//     likesReadingBooks: true,
+//     address: {
+//         city: "Bokaro",
+//         state: "Jharkhand",
+//         country: "India"
+//     }
+// }
+// let {name,batch,likesReadingBooks,address} = piku;
+// let {city,state} = address;
+
+// console.log(name,batch,likesReadingBooks);.
+// console.log(city,state);
+
+// let arr = [1,2,3,["Siddharth", "piku"],4,5];
+
+// let[first,sec,third,fourth,five,six] = arr;
+// let[fNmae,lNmae] = fourth;
+
+// console.log(fNmae,lNmae);
+// console.log(first,sec,third,fNmae,lNmae,five,six);
+
+var a = 1;
+var b = 2;
+// console.log(a,b);
+
+// Swaping the values of these two variables
+    // let temp = a;
+    // a = b;
+    // b =temp;
+    // console.log(a,b);
+
+
+// Without any extra space
+
+    // a = a+b; // 1+2 = 3
+    // b = a-b;  // 3 - 2 = 1
+    // a = a- b; // 3-1 = 2
+
+    // console.log(a,b);
+
+//Using object property assigment and destructuring concept 
+
+// let [a,b] = [a,b];
+// console.log(a,b);
+
+// Object.entries()
+
+let piku = {
+    name: "Priyanka Kumari",
+    batch: "22",
+    likesReadingBooks: true,
+    address: {
+        city: "Bokaro",
+        state: "Jharkhand",
+        country: "India"
+    }
+}
+
+console.log(Object.entries(piku));
