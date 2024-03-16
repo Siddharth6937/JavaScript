@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management System</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Order Status Management</h1>
+        <input type="text" placeholder="Please enter Order Id" id="order-id-input">
+        <button onclick="executeOrder(() => addDoneClass(9))">EXECUTE</button>
+        <h2 id="order-id-info"></h2>
+        <div class="status-block" id="order-placed">Order Placed</div>
+        <div class="status-block" id="chef-received">Chef recived the order and start preparing</div>
+        <div class="status-block" id="toppings-added">Toppings added</div>
+        <div class="status-block " id="second-cheeze">Second layer of cheese added</div>
+        <div class="status-block" id="pizza-baked">Pizza backed</div>
+        <div class="status-block" id="">Pizza backed!</div>
+        <div class="status-block" id="oregano added">Oregano added and packedd</div>
+        <div class="status-block" id="package-counter">Package recived at counter</div>
+        <div class="status-block" id="package-handover">The pakage ready nad handed over to the zomato guy!</div>
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
