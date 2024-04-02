@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Status Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Nav Link -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Order Status Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul> 
+
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">login In</a>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Heading -->
+
+        <div class="container mt-5">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h1 class="text-center">Order Status Management </h1>
+                </div>
+            </div>
+
+            <input class="form-control form-control-lg order-id-input" type="text" id="oder-id-input"
+                placeholder="Enter the ORDER ID to execute">
+
+            <div class="outter-btn">
+                <button class="btn btn-dark btn-lg execute-btn" onclick="executeOrder()" onclick="chiefRecived()">Execute</button>
+            </div>
+
+
+        </div>
+        <!-- Main -->
+        <div class="row" id="parentDiv">
+            <!-- <div class="col-md-4 col-xs-12 order-block">
+                <div class="card text-center">
+                    <div class="card-header" id="order-id-display-1">
+                        Order ID
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bill amount</h5>
+                        <p class="card-text">Items: XYZ, ABC</p>
+                        <span class="badge rounded-pill text-bg-success oder-status">Pizza Baked</span>
+                    </div>
+                    <a class="btn cancel-btn btn-danger">Cancel Order</a>
+                </div>
+            </div> -->
+
+            <img src="assets/Animation - 1711976296310.gif" id="empty-order-gif">
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/oderStatus.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>
