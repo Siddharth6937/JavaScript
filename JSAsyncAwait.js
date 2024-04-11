@@ -35,30 +35,40 @@ let promise = new Promise((resolve, reject) => {
 // handleAsyncCode();
 /*___________________________________________________________*/
 
-let fetchDataFromServer = () => new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("API fechted successfully");
-    }, 8000);
-});
+// let fetchDataFromServer = () => new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("API fechted successfully");
+//     }, 8000);
+// });
 
-let processData = () => new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("Data processed successfully");
-    }, 4000);
-});
+// let processData = () => new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Data processed successfully");
+//     }, 4000);
+// });
 
-const fetchDataAndProcess = async () =>{
-    try{
-    console.log("Fetching data from the server");
-    let res = await fetchDataFromServer();
-    console.log(res);
+// const fetchDataAndProcess = async () =>{
+//     try{
+//     console.log("Fetching data from the server");
+//     let res = await fetchDataFromServer();
+//     console.log(res);
 
-    console.log("Processing data");
-    let res2 = await processData();
-    console.log(res2);
-    } catch(err){
-        console.log(err);
-    }
+//     console.log("Processing data");
+//     let res2 = await processData();
+//     console.log(res2);
+//     } catch(err){
+//         console.log(err);
+//     }
+// }
+
+// fetchDataAndProcess();
+
+/*_____________________________________________*/
+
+/* Data returned from an async function is always a promise */
+
+const asyncFun = async () =>{
+        return "Hello World";
 }
 
-fetchDataAndProcess();
+console.log(asyncFun());
