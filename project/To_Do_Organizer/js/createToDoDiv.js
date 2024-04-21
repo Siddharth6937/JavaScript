@@ -59,7 +59,7 @@ const createToDiv = (toDoInput, toDoPriorityInput, dateAndTime) => {
 
     toDoCardDiv.draggable="true";
     toDoCardDiv.addEventListener("dragstart", toDoDragStart);
-    deleteButton.addEventListener("click", () => toDoCardDiv.style.display="none");
+    deleteButton.addEventListener("cick", () => toDoCardDiv.style.display="none");
 
     toDoCardDiv.appendChild(cardHeaderDiv);
     cardHeaderDiv.appendChild(priorityDisplaySpan);
