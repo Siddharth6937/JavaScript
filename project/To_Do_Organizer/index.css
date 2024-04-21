@@ -61,3 +61,8 @@
     /* width: 100%; */
     float: right;
 }
+.invalid{
+    color: red;
+    margin-left: 10px;
+    display: none;
+}

@@ -18,25 +18,38 @@
 
         <div class="row outer">
             <div class="col-md-4 col-xs-12">
-                <div class="todo-section" id="to-do-block">
+                <div class="todo-section" id="to-do-block" ondragover="allowDrop(event)" ondrop="toDoDrop(event)">
                     <h1 class="display-4">TO-DO</h1>
+                    <!-- <div class="card to-do-card" id="test-id" draggable="true" ondragstart="toDoDragStart(event)">
+                        <div class="card-header">
+                            <span class="badge rounded-pill bg-info text-dark">Low piority</span>
+                            <span>May 27, 2002</span>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Task 111
+                            </h5>
+                            <a href="" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-md-4 col-xs-12">
-                <div class="todo-section">
+                <div class="todo-section" id="in-progress-block" ondragover="allowDrop(event)" ondrop="toDoDrop(event)">
                     <h1 class="display-4">In-Progress</h1>
                 </div>
 
             </div>
             <div class="col-md-4 col-xs-12">
-                <div class="todo-section">
+                <div class="todo-section" id="completed-block" ondragover="allowDrop(event)" ondrop="toDoDrop(event)">
                     <h1 class="display-4">Completed</h1>
                 </div>
 
             </div>
         </div>
 
-        <!-- Modal --> 
+        <!-- Modal -->
         <div class="modal fade" id="createToDoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -48,8 +61,12 @@
                     <div class="modal-body">
                         <input class="form-control form-control-lg" type="text" placeholder="Enter the task"
                             aria-label=".form-control-lg example1" id="todo-input">
-                        <select class="form-select form-select-lg mt-3" aria-label=".form-select-lg example" id="todo-priority-input">
-                
+                        <div id="invalid-todo-input" class="invalid">
+                            please Enter a valid task.
+                        </div>
+                        <select class="form-select form-select-lg mt-3" aria-label=".form-select-lg example"
+                            id="todo-priority-input">
+
                             <option value="High">High</option>
                             <option selected value="Medium">Medium</option>
                             <option value="Low">Low</option>

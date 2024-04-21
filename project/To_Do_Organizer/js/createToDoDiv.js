@@ -1,4 +1,22 @@
 const toDoBlock = document.getElementById("to-do-block");
+let idCount = 1;
+
+
+const toDoDragStart = (event) => {
+    let toDoCardBeingDragged = event.target.id;
+    event.dataTransfer.setData("ToDoCard", toDoCardBeingDragged);
+}
+
+const allowDrop = (event) => {
+    event.preventDefault();
+}
+
+const toDoDrop = (event) => {
+    let toDoCardBeingDragged = event.dataTransfer.getData("ToDoCard");
+    let toDoCardBeingDroped = document.getElementById(toDoCardBeingDragged); 
+    let parentElement = event.target;
+    parentElement.appendChild(toDoCardBeingDroped);
+}
 
 const createToDiv = (toDoInput, toDoPriorityInput, dateAndTime) => {
     console.log("Create TO Div");
@@ -17,6 +35,8 @@ const createToDiv = (toDoInput, toDoPriorityInput, dateAndTime) => {
     cardTitleH5.classList = "card-title";
     deleteButton.classList = "btn btn-sm btn-danger";
 
+    toDoCardDiv.id = `to-do-card-${idCount}`;
+
     priorityDisplaySpan.innerText = `${toDoPriorityInput} Priority`;
     deadlineDisplaySpan.innerText = dateAndTime;
     cardTitleH5.innerText = toDoInput;
@@ -32,10 +52,14 @@ const createToDiv = (toDoInput, toDoPriorityInput, dateAndTime) => {
             break;
 
         case "Low":
-            priorityDisplaySpan.classList = "badge rounded-pill bg-success text-dark";
+            priorityDisplaySpan.classList = "badge rounded-pill bg-info text-dark";
             break;
 
     }
+
+    toDoCardDiv.draggable="true";
+    toDoCardDiv.addEventListener("dragstart", toDoDragStart);
+    deleteButton.addEventListener("click", () => toDoCardDiv.style.display="none");
 
     toDoCardDiv.appendChild(cardHeaderDiv);
     cardHeaderDiv.appendChild(priorityDisplaySpan);
@@ -45,4 +69,5 @@ const createToDiv = (toDoInput, toDoPriorityInput, dateAndTime) => {
     cardBodyDiv.appendChild(deleteButton);
 
     toDoBlock.appendChild(toDoCardDiv);
+    idCount++;
 }
