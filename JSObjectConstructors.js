@@ -9,10 +9,15 @@ function Stundents(name, batch, palce, sayHi){
 
 };
 
+Stundents.prototype.contry="India";
+
+const student1 = new Stundents("Name", "batch", "place", "hi");
+
+console.log(student1.name);
+
 let sayHi = function(){
     console.log("Hello");
 }
-
 let papu = new Stundents("pappu",10,"Kolkata");
 
 let sid = new Stundents("siddharth",10,"Ramghar",sayHi);
@@ -96,6 +101,6 @@ let puja = new Stundents("Puja",9,"Kolkata");
 
 
         // Math.max :- returns the maximum value out of  the values provided
-        console.log(Math.max(4,5,6,7,8,9,10));
+        // console.log(Math.max(4,5,6,7,8,9,10));
         // Math.min :- returns the minimum value out of the values provided
-        console.log(Math.min(4,5,6,7,8,9,10));
+        // console.log(Math.min(4,5,6,7,8,9,10));
